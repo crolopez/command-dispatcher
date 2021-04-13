@@ -1,0 +1,41 @@
+{
+  "name": "command-dispatcher",
+  "version": "0.1.0",
+  "license": "GPL-3.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crolopez/command-dispatcher/"
+  },
+  "author": "Cristóbal López Peñalver",
+  "scripts": {
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\"",
+    "lint": "eslint --fix --ext .js,.ts src",
+    "lint:ci": "eslint --ext .js,.ts src tests",
+    "build": "rimraf ./dist && tsc",
+    "start": "node dist/index.js",
+    "test:unit": "jest",
+    "test:unit:coverage": "yarn test:unit --coverage"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.0",
+    "@types/express": "^4.17.11",
+    "@types/morgan": "^1.9.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "concurrently": "^6.0.2",
+    "eslint": "^7.24.0",
+    "jest": "^26.6.3",
+    "lint": "^0.7.0",
+    "nodemon": "^2.0.7",
+    "ts-jest": "^26.5.4",
+    "tslib": "^2.2.0",
+    "typescript": "^4.2.4"
+  }
+}
